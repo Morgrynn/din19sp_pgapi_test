@@ -4,10 +4,10 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './.env' });
 
 const connection = new Pool({
-  user: process.env.HEROKU_USER,
-  host: process.env.HEROKU_HOST,
-  database: process.env.HEROKU_DATABASE,
-  password: process.env.HEROKU_PASS,
-  port: process.env.DB_PORT,
+  user: process.env.DATABASE_USERNAME,
+  host: process.env.DATABASE_HOST,
+  database: process.env.DATABASE_NAME,
+  password: process.env.DATABASE_PASSWORD,
+  port: process.env.DATABASE_PORT,
 });
 module.exports = connection;
